@@ -3,7 +3,7 @@
 A CLI tool to easily switch the AWS CLI active `default` profile by changing directly the `~/.aws/config` and the `~/.aws/credentials` file.
 
 ## Instalation
-pip install git+https://github.com/aflopes/awsuse.git
+pip install awsuse
 
 ## Usage
 ```
