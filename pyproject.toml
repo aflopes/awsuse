@@ -5,6 +5,8 @@ description = "CLI to switch the aws cli default profile quickly"
 authors = ["Andre Lopes <afsalopes@gmail.com>"]
 readme = "README.md"
 packages = [{include = "awsuse"}]
+homepage = "https://github.com/aflopes/awsuse"
+repository = "https://github.com/aflopes/awsuse"
 
 [tool.poetry.dependencies]
 python = "^3.10"
