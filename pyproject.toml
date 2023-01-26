@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "awsuse"
-version = "0.1.1"
+version = "0.1.2"
 description = "CLI to switch the aws cli default profile quickly"
 authors = ["Andre Lopes <afsalopes@gmail.com>"]
 readme = "README.md"
