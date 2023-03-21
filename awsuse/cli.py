@@ -15,7 +15,6 @@ def validate_aws_profile(profile):
 
 def read_config_section(config_file: str, section: str) -> list[tuple[str, str]]:
     config = configparser.RawConfigParser()
-    Path("~/.aws").expanduser()
     config.read(Path(config_file).expanduser())
     return config.items(section)
 
