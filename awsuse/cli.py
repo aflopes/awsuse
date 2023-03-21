@@ -1,5 +1,5 @@
 import configparser
-from pathlib import PosixPath
+from pathlib import Path
 
 import boto3
 import click
@@ -15,7 +15,8 @@ def validate_aws_profile(profile):
 
 def read_config_section(config_file: str, section: str) -> list[tuple[str, str]]:
     config = configparser.RawConfigParser()
-    config.read(PosixPath(config_file).expanduser())
+    Path("~/.aws").expanduser()
+    config.read(Path(config_file).expanduser())
     return config.items(section)
 
 
@@ -44,10 +45,10 @@ def overwrite_config_section(
 ):
 
     config = configparser.RawConfigParser()
-    config.read(PosixPath(config_file).expanduser())
+    config.read(Path(config_file).expanduser())
     config[section] = {k: v for k, v in configs}
 
-    with open(PosixPath(config_file).expanduser(), "w") as fp:
+    with open(Path(config_file).expanduser(), "w") as fp:
         config.write(fp)
 
 
